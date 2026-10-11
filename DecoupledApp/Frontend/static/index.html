@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grade Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div class="page">
+    <header class="site-header">
+        <span class="brand-mark" aria-hidden="true">&#10003;</span>
+        <span>Grade Checker</span>
+    </header>
+    <main>
+        <section class="intro" aria-labelledby="page-title">
+            <p class="eyebrow">Your academic overview</p>
+            <h1 id="page-title">A little clarity.<br>All your grades.</h1>
+            <p class="subtitle">Your course results, in one simple view.</p>
+        </section>
+        <section class="panel lookup-panel">
+            <h2 class="panel-heading">Find your grades</h2>
+            <label for="student_id">Student ID</label>
+            <div class="input-row">
+                <input type="text" id="student_id" name="student_id" placeholder="Enter your student ID" aria-describedby="id-hint">
+                <button type="submit" onclick="fetchGrades()">Check Grade <span aria-hidden="true">&rarr;</span></button>
+            </div>
+            <p class="helper" id="id-hint">Enter your student ID to view your course grades.</p>
+        </section>
+        <div id="result" class="table-wrap" aria-live="polite"></div>
+    </main>
+    <footer class="site-footer">Grade Checker &middot; Your academic overview</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Grades | Grade Checker</title>
+    <style>{% include "style.css" %}</style>
+</head>
+<body>
+<div class="page">
+    <header class="site-header">
+        <span class="brand-mark" aria-hidden="true">&#10003;</span>
+        <span>Grade Checker</span>
+    </header>
+    <main>
+        <section class="intro" aria-labelledby="page-title">
+            <p class="eyebrow">Your academic overview</p>
+            <h1 id="page-title">Student Grades</h1>
+            <p class="subtitle">Your course results, in one simple view.</p>
+        </section>
+        <div class="table-wrap">
+            <table aria-label="Student grades">
+                <thead>
+                    <tr>
+                        <th scope="col">Student ID</th>
+                        <th scope="col">Student Name</th>
+                        <th scope="col">Course Name</th>
+                        <th scope="col">Course Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for grade in grades %}
+                    <tr>
+                        <td>{{ grade[0] }}</td>
+                        <td>{{ grade[1] }}</td>
+                        <td>{{ grade[2] }}</td>
+                        <td>{{ grade[3] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer class="site-footer">Grade Checker &middot; Your academic overview</footer>
+</div>
+</body>
+</html>
